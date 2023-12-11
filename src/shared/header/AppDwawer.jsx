@@ -1,0 +1,151 @@
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import CssBaseline from '@mui/material/CssBaseline';
+import Divider from '@mui/material/Divider';
+import Drawer from '@mui/material/Drawer';
+import IconButton from '@mui/material/IconButton';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemText from '@mui/material/ListItemText';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import MenuOpenIcon from '@mui/icons-material/MenuOpen';
+import { Link } from 'react-router-dom';
+// import MailIcon from '@mui/icons-material/Mail';
+// import { Stack } from '@mui/material';
+// import FacebookIcon from '@mui/icons-material/Facebook';
+// import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+// import { GitHub, Instagram, LinkedIn } from '@mui/icons-material';
+// import "./navbar.css"
+
+const drawerWidth = 240;
+const navItems = ['Home',];
+
+function AppDwawer(props) {
+    // console.log(props)
+    const { window } = props;
+    const [mobileOpen, setMobileOpen] = React.useState(false);
+
+    const handleDrawerToggle = () => {
+        setMobileOpen((prevState) => !prevState);
+    };
+
+    const drawer = (
+        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+            <Typography variant="h6" sx={{ my: 2 }}>
+                SCPDev
+            </Typography>
+            <Divider />
+            <List>
+                {navItems.map((item) => (
+                    <ListItem key={item} disablePadding>
+                        <ListItemButton sx={{ textAlign: 'center' }}>
+                            <Link to={`/${item}`}> <ListItemText primary={item} /></Link>
+                        </ListItemButton>
+                    </ListItem>
+                ))}
+            </List>
+        </Box>
+    );
+
+    const container = window !== undefined ? () => window().document.body : undefined;
+
+    return (
+        <Box sx={{ display: 'flex' }}>
+            <CssBaseline />
+            <AppBar component="nav">
+                {/* <section className='bg-slate-800 hidden sm:block py-1'>
+                    <div className="container mx-auto">
+                        <Box bgcolor={"primary"}>
+                            <div className='flex items-center justify-end gap-20'>
+                                <Stack direction={"row"} spacing={4}>
+                                    <a className='flex items-center gap-1 font-thin text-sm' href="mailto:sumonpaul3217@gmail.com">
+                                        <MailIcon fontSize='string' />
+                                        <Typography variant='span'>sumonpaul3217@gmail.com</Typography></a>
+                                    <a className='flex items-center gap-1 font-thin text-sm' href="whatsapp://tel:8801628883217">
+                                        <WhatsAppIcon fontSize='string' />
+                                        <Typography variant=''>01628883217</Typography>
+                                    </a>
+                                </Stack>
+                                <Stack direction={"row"} spacing={2}>
+                                    <Link className='text-xl' target='_blank' to="https://www.facebook.com/sumonpaul55">
+                                        <FacebookIcon fontSize='string' className='text-white' />
+                                    </Link>
+                                    <Link className='text-xl' target='_blank' to="https://www.linkedin.com/in/sumonpaul5">
+                                        <LinkedIn fontSize='string' className='text-white' />
+                                    </Link>
+                                    <Link className='text-xl' target='_blank' to="https://github.com/sumonpaul55">
+                                        <GitHub fontSize='string' className='text-white' />
+                                    </Link>
+                                    <Link className='text-xl' target='_blank' to="https://www.instagram.com/sumpaul5">
+                                        <Instagram fontSize='string' className='text-white' />
+                                    </Link>
+                                </Stack>
+                            </div>
+                        </Box>
+                    </div>
+                </section> */}
+                <div className="container mx-auto">
+                    <Toolbar style={{ minHeight: "auto", padding: "4px 0" }}>
+                        <IconButton
+                            color="inherit"
+                            aria-label="open drawer"
+                            edge="start"
+                            onClick={handleDrawerToggle}
+                            sx={{ mr: 2, display: { sm: 'none' } }}
+                        >
+                            <MenuOpenIcon />
+                        </IconButton>
+                        <Typography
+                            variant="h6"
+                            component="h3"
+                            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block', fontWeight: "bold" } }}
+                        >
+                            <Link to="/">SCPDev</Link>
+                        </Typography>
+                        <Box sx={{ display: { xs: 'none', sm: 'block', height: 'auto' } }}>
+                            {navItems.map((item) => (
+                                <Button key={item} sx={{ color: '#fff' }}>
+                                    {item}
+                                </Button>
+                            ))}
+                        </Box>
+                    </Toolbar>
+                </div>
+            </AppBar>
+            <nav>
+                {/* <Box>
+                <Typography variant='h4'>hi</Typography>
+                </Box> */}
+                <Drawer
+                    container={container}
+                    variant="temporary"
+                    open={mobileOpen}
+                    onClose={handleDrawerToggle}
+                    ModalProps={{
+                        keepMounted: true, // Better open performance on mobile.
+                    }}
+                    sx={{
+                        display: { xs: 'block', sm: 'none' },
+                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+                    }}>
+                    {drawer}
+                </Drawer>
+            </nav>
+        </Box>
+    );
+}
+
+AppDwawer.propTypes = {
+    /**
+     * Injected by the documentation to work in an iframe.
+     * You won't need it on your project.
+     */
+    window: PropTypes.func,
+};
+
+export default AppDwawer;
