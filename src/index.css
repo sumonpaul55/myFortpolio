@@ -3,4 +3,8 @@
 @tailwind utilities;
 
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* @import url(http://fonts.googleapis.com/css?family=Roboto:300,400,100,500,900); */

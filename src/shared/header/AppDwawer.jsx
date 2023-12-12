@@ -21,9 +21,9 @@ import { Link } from 'react-router-dom';
 // import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 // import { GitHub, Instagram, LinkedIn } from '@mui/icons-material';
 // import "./navbar.css"
-
+import logo from "../../assets/logo.png"
 const drawerWidth = 240;
-const navItems = ['Home', "contact",];
+const navItems = ['Home', "contact", "Gellary",];
 
 function AppDwawer(props) {
     // console.log(props)
@@ -37,7 +37,9 @@ function AppDwawer(props) {
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
             <Typography variant="h6" sx={{ my: 2 }}>
-                SCPDev
+                <div className='px-3'>
+                    <img src={logo} alt="" />
+                </div>
             </Typography>
             <Divider />
             <List>
@@ -75,13 +77,17 @@ function AppDwawer(props) {
                             component="h3"
                             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block', fontWeight: "bold" } }}
                         >
-                            <Link to="/">SCPDev</Link>
+                            <Link to="/">
+                                <img src={logo} alt="" className='w-32' />
+                            </Link>
                         </Typography>
                         <Box sx={{ display: { xs: 'none', sm: 'block', height: 'auto' } }}>
                             {navItems.map((item) => (
-                                <Button key={item} sx={{ color: '#fff' }}>
-                                    {item}
-                                </Button>
+                                <Link key={item} to={`${item}`}>
+                                    <Button sx={{ color: '#fff' }}>
+                                        {item}
+                                    </Button>
+                                </Link>
                             ))}
                         </Box>
                     </Toolbar>
