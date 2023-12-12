@@ -11,7 +11,7 @@ const MainLayout = () => {
                 <Communicate></Communicate>
                 <Outlet></Outlet>
             </div>
-            <footer className='py-32 bg-slate-900'>
+            <footer className='py-32 bg-slate-900 px-2'>
                 <div className="container mx-auto">
                     <div className='grid grid-cols-1 md:grid-cols-3 gap-14'>
                         <div>
