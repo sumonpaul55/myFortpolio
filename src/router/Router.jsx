@@ -5,6 +5,7 @@ import {
 } from "react-router-dom";
 import Home from "../pages/home/Home";
 import Contact from "../contact/Contact";
+import Gallery from "../pages/gallery/Gallery";
 
 const router = createBrowserRouter([
     {
@@ -23,6 +24,11 @@ const router = createBrowserRouter([
             {
                 path: "/contact",
                 element: <Contact></Contact>
+            }
+            ,
+            {
+                path: "/Gellary",
+                element: <Gallery></Gallery>
             }
         ]
     }
