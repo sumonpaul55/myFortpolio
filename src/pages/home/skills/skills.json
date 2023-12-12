@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name": "HTML",
+        "img": "../src/assets/skills/html.png",
+        "description": "Building the backbone of web content with semantic markup and structure."
+    },
+    {
+        "id": 2,
+        "name": "CSS",
+        "img": "../src/assets/skills/css.png",
+        "description": "Styling and designing captivating user interfaces for a seamless web experience."
+    },
+    {
+        "id": 3,
+        "name": "JavaScript",
+        "img": "../src/assets/skills/js.png",
+        "description": "Creating dynamic and interactive elements that breathe life into web applications."
+    },
+    {
+        "id": 4,
+        "name": "React",
+        "img": "../src/assets/skills/react.png",
+        "description": "Crafting efficient and modular UI components for modern, responsive web applications."
+    },
+    {
+        "id": 5,
+        "name": "Firebase",
+        "img": "../src/assets/skills/firebase.png",
+        "description": "Leveraging the power of Firebase for real-time databases and effortless app deployment."
+    },
+    {
+        "id": 6,
+        "name": "Tailwind",
+        "img": "../src/assets/skills/tailwind.png",
+        "description": "Streamlining UI development with utility-first CSS framework for a sleek and consistent design."
+    },
+    {
+        "id": 7,
+        "name": "Bootstrap",
+        "img": "../src/assets/skills/bootstrap.png",
+        "description": "Harnessing the robustness of Bootstrap for rapid and responsive web development."
+    },
+    {
+        "id": 8,
+        "name": "Express",
+        "img": "../src/assets/skills/expressjs.png",
+        "description": "Building scalable and efficient server-side applications with the Express.js framework."
+    },
+    {
+        "id": 9,
+        "name": "MongoDB",
+        "img": "../src/assets/skills/mongodb.png",
+        "description": "Managing data seamlessly in NoSQL databases, enabling flexible and scalable solutions."
+    },
+    {
+        "id": 10,
+        "name": "Git",
+        "img": "../src/assets/skills/git.png",
+        "description": "Version control mastery for collaborative and organized development workflows."
+    },
+    {
+        "id": 11,
+        "name": "Tanstack query",
+        "img": "../src/assets/skills/tanstack.png",
+        "description": "TanStack Query is configurable down to each observer instance of a query with knobs and options to fit every use-case"
+    },
+    {
+        "id": 11,
+        "name": "Node js",
+        "img": "../src/assets/skills/nodejs.png",
+        "description": "TanStack Query is configurable down to each observer instance of a query with knobs and options to fit every use-case"
+    }
+]

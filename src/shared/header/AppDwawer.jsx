@@ -23,7 +23,7 @@ import { Link } from 'react-router-dom';
 // import "./navbar.css"
 
 const drawerWidth = 240;
-const navItems = ['Home',];
+const navItems = ['Home', "contact",];
 
 function AppDwawer(props) {
     // console.log(props)
@@ -48,6 +48,7 @@ function AppDwawer(props) {
                         </ListItemButton>
                     </ListItem>
                 ))}
+                <Link>projects</Link>
             </List>
         </Box>
     );
@@ -58,39 +59,8 @@ function AppDwawer(props) {
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
             <AppBar component="nav">
-                {/* <section className='bg-slate-800 hidden sm:block py-1'>
-                    <div className="container mx-auto">
-                        <Box bgcolor={"primary"}>
-                            <div className='flex items-center justify-end gap-20'>
-                                <Stack direction={"row"} spacing={4}>
-                                    <a className='flex items-center gap-1 font-thin text-sm' href="mailto:sumonpaul3217@gmail.com">
-                                        <MailIcon fontSize='string' />
-                                        <Typography variant='span'>sumonpaul3217@gmail.com</Typography></a>
-                                    <a className='flex items-center gap-1 font-thin text-sm' href="whatsapp://tel:8801628883217">
-                                        <WhatsAppIcon fontSize='string' />
-                                        <Typography variant=''>01628883217</Typography>
-                                    </a>
-                                </Stack>
-                                <Stack direction={"row"} spacing={2}>
-                                    <Link className='text-xl' target='_blank' to="https://www.facebook.com/sumonpaul55">
-                                        <FacebookIcon fontSize='string' className='text-white' />
-                                    </Link>
-                                    <Link className='text-xl' target='_blank' to="https://www.linkedin.com/in/sumonpaul5">
-                                        <LinkedIn fontSize='string' className='text-white' />
-                                    </Link>
-                                    <Link className='text-xl' target='_blank' to="https://github.com/sumonpaul55">
-                                        <GitHub fontSize='string' className='text-white' />
-                                    </Link>
-                                    <Link className='text-xl' target='_blank' to="https://www.instagram.com/sumpaul5">
-                                        <Instagram fontSize='string' className='text-white' />
-                                    </Link>
-                                </Stack>
-                            </div>
-                        </Box>
-                    </div>
-                </section> */}
                 <div className="container mx-auto">
-                    <Toolbar style={{ minHeight: "auto", padding: "4px 0" }}>
+                    <Toolbar style={{ minHeight: "auto", padding: "4px 10px" }}>
                         <IconButton
                             color="inherit"
                             aria-label="open drawer"
@@ -121,6 +91,7 @@ function AppDwawer(props) {
                 {/* <Box>
                 <Typography variant='h4'>hi</Typography>
                 </Box> */}
+
                 <Drawer
                     container={container}
                     variant="temporary"
