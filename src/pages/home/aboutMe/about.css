@@ -1,6 +1,6 @@
 .dotted-animation {
     animation-duration: 10s;
-    animation: dotteanimation 20s ease-in-out infinite;
+    animation: dotteanimation 20s ease-in infinite;
 }
 
 @keyframes dotteanimation {
@@ -9,25 +9,23 @@
         transform: rotate(0);
     }
 
-    25% {
+    /* 25% {
         top: 50%;
         transform: rotate(90deg);
-    }
+    } */
 
     50% {
         top: 90%;
-
         transform: rotate(180deg);
     }
 
-    75% {
+    /* 75% {
         top: 50%;
 
         transform: rotate(270deg);
-    }
+    } */
 
     100% {
-
         transform: rotate(360deg);
         top: 0;
     }

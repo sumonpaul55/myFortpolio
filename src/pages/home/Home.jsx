@@ -7,6 +7,7 @@ import Skills from './skills/Skills';
 // import MyProjects from './projects/MyProjects';
 import Projects from './projects/Projects';
 import Testimonial from './Testimonial/Testimonial';
+import Experiences from './Experiences/Experiences';
 // import MyHelmet from '../../components/MyHelmet';m 
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
                 <Banner></Banner>
                 <AboutmeSection></AboutmeSection>
                 <Skills></Skills>
+                <Experiences></Experiences>
                 <Projects></Projects>
                 <Testimonial></Testimonial>
             </main >
