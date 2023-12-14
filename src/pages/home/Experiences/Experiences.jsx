@@ -22,49 +22,49 @@ const Experiences = () => {
                     </div>
                     <div className='mt-0 md:mt-14'>
                         <Accordion className='mt-10 md:p-8'>
-                            <AccordionItem className='border p-1 md:p-3 rounded-md'>
+                            <AccordionItem className=''>
                                 <AccordionItemHeading>
-                                    <AccordionItemButton className='font-bold text-white text-sm md:text-md hover:text-pink-500 duration-200'>
+                                    <AccordionItemButton className='font-bold border border-slate-600 text-white bg-slate-600 p-3 text-sm md:text-md hover:text-pink-500 duration-200'>
                                         HTML, CSS, and JavaScript Mastery
                                     </AccordionItemButton>
                                 </AccordionItemHeading>
-                                <AccordionItemPanel className='mt-2 p-2'>
+                                <AccordionItemPanel className='p-2 border border-slate-600'>
                                     <p className='text-slate-300 text-sm md:text-base'>
                                         My journey began with a solid foundation in HTML, CSS, and JavaScript, allowing me to create well-structured, visually appealing, and interactive user interfaces. Crafting clean and semantic HTML structures, styling with precision using CSS, and implementing dynamic functionalities with JavaScript are hallmarks of my development approach.
                                     </p>
                                 </AccordionItemPanel>
                             </AccordionItem>
-                            <AccordionItem className='mt-5 border p-1 md:p-3 rounded-md'>
+                            <AccordionItem className='mt-3'>
                                 <AccordionItemHeading>
-                                    <AccordionItemButton className='font-bold text-white text-sm md:text-md hover:text-pink-500 duration-200'>
+                                    <AccordionItemButton className='font-bold border border-slate-600 text-white bg-slate-600 p-3 text-sm md:text-md hover:text-pink-500 duration-200'>
                                         React Proficiency
                                     </AccordionItemButton>
                                 </AccordionItemHeading>
-                                <AccordionItemPanel className='p-2'>
+                                <AccordionItemPanel className='p-2 border border-slate-600'>
                                     <p className='text-slate-300 text-sm md:text-base'>
                                         With a focus on React, I've honed my skills in component-based architecture, state management, and the virtual DOM. My two years of experience in React demonstrate my ability to build scalable and efficient user interfaces, utilizing concepts such as hooks, context, and higher-order components.
                                     </p>
                                 </AccordionItemPanel>
                             </AccordionItem>
-                            <AccordionItem className='mt-5 border p-1 md:p-3 rounded-md'>
+                            <AccordionItem className='mt-3'>
                                 <AccordionItemHeading>
-                                    <AccordionItemButton className='font-bold text-white text-sm md:text-md hover:text-pink-500 duration-200'>
+                                    <AccordionItemButton className='font-bold border border-slate-600 text-white bg-slate-600 p-3 text-sm md:text-md hover:text-pink-500 duration-200'>
                                         CSS Frameworks - Tailwind and Bootstrap
                                     </AccordionItemButton>
                                 </AccordionItemHeading>
-                                <AccordionItemPanel className='p-2'>
+                                <AccordionItemPanel className='p-2 border border-slate-600'>
                                     <p className='text-slate-300 text-sm md:text-base'>
                                         I bring adaptability to the table with expertise in both Tailwind and Bootstrap. Leveraging these frameworks efficiently, I ensure seamless styling while exploring customization options to tailor designs based on project requirements.
                                     </p>
                                 </AccordionItemPanel>
                             </AccordionItem>
-                            <AccordionItem className='mt-5 border p-1 md:p-3 rounded-md'>
+                            <AccordionItem className='mt-3'>
                                 <AccordionItemHeading>
-                                    <AccordionItemButton className='font-bold text-white text-sm md:text-md hover:text-pink-500 duration-200'>
+                                    <AccordionItemButton className='font-bold border border-slate-600 text-white bg-slate-600 p-3 text-sm md:text-md hover:text-pink-500 duration-200'>
                                         Advanced JavaScript Concepts
                                     </AccordionItemButton>
                                 </AccordionItemHeading>
-                                <AccordionItemPanel className='p-2'>
+                                <AccordionItemPanel className='p-2 border border-slate-600'>
                                     <p className='text-slate-300 text-sm md:text-base'>
                                         Aiming for excellence, I've deepened my understanding of advanced JavaScript concepts such as closures, promises, async/await, and the event loop. This knowledge empowers me to write code that is not only functional but also optimized and maintainable.
                                     </p>
