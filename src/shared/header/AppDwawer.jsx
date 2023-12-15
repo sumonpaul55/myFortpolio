@@ -23,7 +23,7 @@ import { Link } from 'react-router-dom';
 // import "./navbar.css"
 import logo from "../../assets/logo.png"
 const drawerWidth = 240;
-const navItems = ['Home', "contact", "Gellary",];
+const navItems = ['Home', "contact", "Gellary", "login"];
 
 function AppDwawer(props) {
     // console.log(props)
