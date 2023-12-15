@@ -10,6 +10,7 @@ import {
     AccordionItemPanel,
 } from 'react-accessible-accordion';
 const Experiences = () => {
+
     return (
         <section className='md:py-32 px-2 bg-slate-700'>
             <div className="container mx-auto">

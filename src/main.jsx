@@ -6,6 +6,7 @@ import router from './router/Router'
 import { HelmetProvider } from 'react-helmet-async'
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
+import Authcontext from './shared/contextProvider/Authcontext'
 // ..
 AOS.init({
   duration: 2000,
@@ -13,7 +14,9 @@ AOS.init({
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <HelmetProvider>
-      <RouterProvider router={router}></RouterProvider>
+      <Authcontext>
+        <RouterProvider router={router}></RouterProvider>
+      </Authcontext>
     </HelmetProvider>
   </React.StrictMode>,
 )
