@@ -32,10 +32,10 @@ const Banner = () => {
                                     <p className='max-w-[400px] mx-auto md:mx-0 text-start'>As a React.js front-end developer, I excel in crafting dynamic websites with a keen emphasis on efficiency and a seamless user experience.</p>
                                     <div className='flex gap-4 md:gap-10 mt-5 justify-center md:justify-start'>
                                         <button className='px-4 lg:px-0 font-semibold lg:min-w-[200px] hover:bg-pink-800 duration-200 rounded-md bg-pink-600 py-1 md:py mt-5-2'>
-                                            <a href={resume} download>Download CV</a>
+                                            <a href={resume} download>Download Resume</a>
                                         </button>
                                         <button className='px-4 lg:px-0 font-semibold lg:min-w-[200px] hover:bg-pink-800 duration-200 rounded-md bg-pink-600 py-1 md:py mt-5-2'>
-                                            <a href="https://drive.google.com/file/d/1ww5z3TermAyzInt3qPy-99dqFcKwp5AJ/view?usp=sharing" target='_blank' rel="noreferrer">View CV</a>
+                                            <a href="https://drive.google.com/file/d/1ww5z3TermAyzInt3qPy-99dqFcKwp5AJ/view?usp=sharing" target='_blank' rel="noreferrer">View Resume</a>
                                         </button>
                                     </div>
                                 </div>
