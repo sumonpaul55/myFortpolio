@@ -22,7 +22,6 @@ const Banner = () => {
                                         1000,
                                         "I am, " + 'Mern stack Developer',
                                         1000,
-
                                     ]}
                                     wrapper="span"
                                     speed={50}
@@ -36,7 +35,7 @@ const Banner = () => {
                                             <a href={resume} download>Download CV</a>
                                         </button>
                                         <button className='px-4 lg:px-0 font-semibold lg:min-w-[200px] hover:bg-pink-800 duration-200 rounded-md bg-pink-600 py-1 md:py mt-5-2'>
-                                            <a href="https://drive.google.com/file/d/1cI1T675yEBqWYCyBiKCs2uCaY5xV_Z1p/view?usp=sharing" target='_blank' rel="noreferrer">View CV</a>
+                                            <a href="https://drive.google.com/file/d/1ww5z3TermAyzInt3qPy-99dqFcKwp5AJ/view?usp=sharing" target='_blank' rel="noreferrer">View CV</a>
                                         </button>
                                     </div>
                                 </div>
