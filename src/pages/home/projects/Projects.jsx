@@ -6,6 +6,7 @@ import babycare from "../../../assets/projects/babycare.png"
 import hostflu from "../../../assets/projects/hostflu.png"
 import triptrove from "../../../assets/projects/triptrove.png"
 import electronics from "../../../assets/projects/electronics.png"
+import todos from "../../../assets/projects/taskmanagement.png"
 
 
 // import "./project.css"
@@ -58,7 +59,7 @@ export default class Projects extends Component {
                                 <div className="relative mx-2 md:mx-4">
                                     <a href="https://effulgent-squirrel-0a7c38.netlify.app" target="_blank" rel="noreferrer">
                                         <img src={hostflu} alt="Hostflu" />
-                                        <h1 className="py-3 md:py-8 bg-slate-700 bg-opacity-70 text-center hover:bg-opacity-90 hover:text-pink-600 text-white font-bold absolute bottom-0 w-full text-xl md:text-2xl">Hostflue</h1>
+                                        <h1 className="py-3 md:py-8 bg-blue-500 hover:top-0 duration-200 bg-opacity-70 text-center hover:bg-opacity-90 hover:text-pink-600 text-white font-bold absolute bottom-0 w-full text-xl md:text-2xl">Hostflue</h1>
                                     </a>
                                 </div>
                             </div>
@@ -66,7 +67,7 @@ export default class Projects extends Component {
                                 <div className="relative mx-2 md:mx-4">
                                     <a href="https://littlestars-care.web.app" target="_blank" rel="noreferrer">
                                         <img src={babycare} alt="babycare" />
-                                        <h1 className="py-3 md:py-8 bg-slate-700 bg-opacity-70 text-center hover:bg-opacity-90 hover:text-pink-600 text-white font-bold absolute bottom-0 w-full text-xl md:text-2xl">Babycare</h1>
+                                        <h1 className="py-3 md:py-8 bg-blue-500 hover:top-0 bg-opacity-70 text-center hover:bg-opacity-90 hover:text-pink-600 text-white font-bold absolute bottom-0 w-full text-xl md:text-2xl">Babycare</h1>
                                     </a>
                                 </div>
                             </div>
@@ -74,7 +75,7 @@ export default class Projects extends Component {
                                 <div className="relative mx-2 md:mx-4">
                                     <a href="https://trip-trove-e91d8.web.app" target="_blank" rel="noreferrer">
                                         <img src={triptrove} alt="triptrove" />
-                                        <h1 className="py-3 md:py-8 bg-slate-700 bg-opacity-70 text-center hover:bg-opacity-90 hover:text-pink-600 text-white font-bold absolute bottom-0 w-full text-xl md:text-2xl">Trip trove</h1>
+                                        <h1 className="py-3 md:py-8 bg-blue-500 hover:top-0 bg-opacity-70 text-center hover:bg-opacity-90 hover:text-pink-600 text-white font-bold absolute bottom-0 w-full text-xl md:text-2xl">Trip trove</h1>
                                     </a>
                                 </div>
                             </div>
@@ -82,15 +83,15 @@ export default class Projects extends Component {
                                 <div className="relative mx-2 md:mx-4">
                                     <a href="https://scp-electronics.web.app" target="_blank" rel="noreferrer">
                                         <img src={electronics} alt="electronics" />
-                                        <h1 className="py-3 md:py-8 bg-slate-700 bg-opacity-70 text-center hover:bg-opacity-90 hover:text-pink-600 text-white font-bold absolute bottom-0 w-full text-xl md:text-2xl">Electronics</h1>
+                                        <h1 className="py-3 md:py-8 bg-blue-500 hover:top-0 bg-opacity-70 text-center hover:bg-opacity-90 hover:text-pink-600 text-white font-bold absolute bottom-0 w-full text-xl md:text-2xl">Electronics</h1>
                                     </a>
                                 </div>
                             </div>
                             <div>
                                 <div className="relative mx-2 md:mx-4">
-                                    <a href="https://littlestars-care.web.app" target="_blank" rel="noreferrer">
-                                        <img src={babycare} alt="babycare" />
-                                        <h1 className="py-3 md:py-8 bg-slate-700 bg-opacity-70 text-center hover:bg-opacity-90 hover:text-pink-600 text-white font-bold absolute bottom-0 w-full text-xl md:text-2xl">Babycare</h1>
+                                    <a href="https://task-managemet.web.app" target="_blank" rel="noreferrer">
+                                        <img src={todos} alt="babycare" />
+                                        <h1 className="py-3 md:py-8 bg-blue-500 hover:top-0 bg-opacity-70 text-center hover:bg-opacity-90 hover:text-pink-600 text-white font-bold absolute bottom-0 w-full text-xl md:text-2xl">Todos</h1>
                                     </a>
                                 </div>
                             </div>

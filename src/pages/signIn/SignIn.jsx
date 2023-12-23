@@ -6,14 +6,18 @@ import { IconButton } from '@mui/material';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import axios from 'axios';
 import Swal from 'sweetalert2';
+import useAxiosPublic from '../../hooks/useaxiosPublic';
+import Loading from '../../shared/loadingPage/Loading';
 
 const image_api = import.meta.env.VITE_IMAGE_API;
 const imageHosting = `https://api.imgbb.com/1/upload?key=${image_api}`
+
 const SignIn = () => {
+    const [proccesing, setProccesing] = useState(false)
     const [showpass, setShowpass] = useState(false)
     const { loginWithGoogle } = useContext(UserContext)
 
-
+    const publicAxios = useAxiosPublic()
     const handleLogin = async (e) => {
         e.preventDefault();
         const form = e.target;
@@ -22,25 +26,32 @@ const SignIn = () => {
         const password = form.password.value;
         const image = form.image.files[0];
         if (image) {
+            setProccesing(true)
             try {
                 const formData = new FormData();
                 formData.append("image", image)
                 const response = await axios.post(imageHosting, formData)
                 if (response.data.data.url) {
                     const imageUrl = response.data.data.url
-
                     const userInformation = {
                         name, email, password, imageUrl
                     }
+                    const loginresponse = await publicAxios.post("/login", userInformation)
+                    console.log(loginresponse)
 
-
+                    toast(`Your have registered Succesfully`, {
+                        autoClose: 2000,
+                        position: "bottom-right"
+                    })
+                    setProccesing(false)
                 }
             } catch (err) {
-                Swal.fire(err, { position: "top-right" })
+                Swal.fire(`something went wrong`, { position: "top-right" })
+                setProccesing(false)
             }
         }
 
-
+        form.reset()
     }
 
 
@@ -86,12 +97,15 @@ const SignIn = () => {
                         </div>
                         <div>
                             <label htmlFor="">Your Image</label>
-                            <input type="file" name='image' className='bg-white w-full border-0 p-1 rounded-md text-black cursor-pointer' />
+                            <input type="file" name='image' required className='bg-white w-full border-0 p-1 rounded-md text-black cursor-pointer' />
                         </div>
                         <div className='text-center'>
                             <input type="submit" className='px-2 md:px-5 bg-slate-100 text-black py-1 rounded-md lg:px-10 hover:bg-slate-300 cursor-pointer duration-200 hover:scale-105 font-semibold' />
                         </div>
                     </form>
+                    {
+                        proccesing && <Loading></Loading>
+                    }
                     <div>
                         <div className='mt-10 text-white'>
                             <h2>Login with google</h2>
