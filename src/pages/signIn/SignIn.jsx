@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { Google, RemoveRedEye } from '@mui/icons-material';
 import React, { useContext, useState } from 'react';
 import { UserContext } from '../../shared/contextProvider/Authcontext';
@@ -8,6 +9,7 @@ import axios from 'axios';
 import Swal from 'sweetalert2';
 import useAxiosPublic from '../../hooks/useaxiosPublic';
 import Loading from '../../shared/loadingPage/Loading';
+import { useNavigate } from 'react-router-dom';
 
 const image_api = import.meta.env.VITE_IMAGE_API;
 const imageHosting = `https://api.imgbb.com/1/upload?key=${image_api}`
@@ -16,43 +18,48 @@ const SignIn = () => {
     const [proccesing, setProccesing] = useState(false)
     const [showpass, setShowpass] = useState(false)
     const { loginWithGoogle } = useContext(UserContext)
-
+    const navigate = useNavigate()
     const publicAxios = useAxiosPublic()
-    const handleLogin = async (e) => {
-        e.preventDefault();
-        const form = e.target;
-        const name = form.name.value;
-        const email = form.email.value;
-        const password = form.password.value;
-        const image = form.image.files[0];
-        if (image) {
-            setProccesing(true)
-            try {
-                const formData = new FormData();
-                formData.append("image", image)
-                const response = await axios.post(imageHosting, formData)
-                if (response.data.data.url) {
-                    const imageUrl = response.data.data.url
-                    const userInformation = {
-                        name, email, password, imageUrl
-                    }
-                    const loginresponse = await publicAxios.post("/login", userInformation)
-                    console.log(loginresponse)
+    // const handleLogin = (e) => {
+    //     e.preventDefault();
+    //     const form = e.target;
+    //     const name = form.name.value;
+    //     const email = form.email.value;
+    //     const password = form.password.value;
+    //     const image = form.image.files[0];
+    //     if (image) {
+    //         setProccesing(true)
+    //         try {
+    //             const formData = new FormData();
+    //             formData.append("image", image)
+    //             axios.post(imageHosting, formData)
+    //                 .then(res => {
+    //                     if (res.data.data.url) {
+    //                         const imageUrl = res.data.data.url
+    //                         const userInformation = {
+    //                             name, email, password, imageUrl
+    //                         }
+    //                         publicAxios.post("/login", userInformation)
+    //                             .then(res => {
+    //                                 console.log(res)
 
-                    toast(`Your have registered Succesfully`, {
-                        autoClose: 2000,
-                        position: "bottom-right"
-                    })
-                    setProccesing(false)
-                }
-            } catch (err) {
-                Swal.fire(`something went wrong`, { position: "top-right" })
-                setProccesing(false)
-            }
-        }
+    //                                 toast(`Your have registered Succesfully`, {
+    //                                     autoClose: 2000,
+    //                                     position: "bottom-right"
+    //                                 })
+    //                             })
+    //                         setProccesing(false)
+    //                     }
+    //                 })
 
-        form.reset()
-    }
+    //         } catch (err) {
+    //             Swal.fire(`something went wrong`, { position: "top-right" })
+    //             setProccesing(false)
+    //         }
+    //     }
+
+    //     form.reset()
+    // }
 
 
 
@@ -65,6 +72,7 @@ const SignIn = () => {
                         position: "bottom-right",
                         autoClose: 3000,
                     })
+                    navigate("/")
                 }
             }).catch(err => {
                 toast(`${err}`)
@@ -74,7 +82,7 @@ const SignIn = () => {
         <main className='min-h-screen bg-slate-700 pt-12'>
             <div className="container mx-auto">
                 <div className='max-w-[500px] mx-auto border rounded-md p-5'>
-                    <form className='text-white space-y-6' onSubmit={handleLogin}>
+                    {/* <form className='text-white space-y-6' onSubmit={handleLogin}>
                         <div>
                             <label htmlFor="">Name</label>
                             <input type="text" required className='w-full rounded-md p-1 bg-slate-200 font-medium outline-none mt-2 text-black' placeholder='Your Name' name='name' />
@@ -102,7 +110,7 @@ const SignIn = () => {
                         <div className='text-center'>
                             <input type="submit" className='px-2 md:px-5 bg-slate-100 text-black py-1 rounded-md lg:px-10 hover:bg-slate-300 cursor-pointer duration-200 hover:scale-105 font-semibold' />
                         </div>
-                    </form>
+                    </form> */}
                     {
                         proccesing && <Loading></Loading>
                     }
