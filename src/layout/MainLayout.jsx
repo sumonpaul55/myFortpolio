@@ -17,7 +17,7 @@ const MainLayout = () => {
                         <div>
                             <img src={logo} alt="" className='max-w-xs' />
                             <p className='text-white mt-7 leading-relaxed'>
-                                Front-end developer crafting pixel-perfect and responsive footers. Proficient in HTML, CSS, and JavaScript to enhance user experiences. Dedicated to delivering visually appealing and seamlessly functional web designs.
+                                Front-end developer crafting pixel-perfect and responsiveness. Proficient in HTML, CSS, JavaScript nad Reactjs and so more. to enhance user experiences. Dedicated to delivering visually appealing and seamlessly functional web development.
                             </p>
                         </div>
                         <div>
