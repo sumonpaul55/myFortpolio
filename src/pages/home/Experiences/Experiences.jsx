@@ -12,7 +12,7 @@ import {
 const Experiences = () => {
 
     return (
-        <section className='md:py-32 px-2 bg-slate-700'>
+        <section className='md:py-32 px-2 bg-slate-700 overflow-x-hidden'>
             <div className="container mx-auto">
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
                     <div data-aos="fade-right">

@@ -15,7 +15,7 @@ const MainLayout = () => {
                 <div className="container mx-auto">
                     <div className='grid grid-cols-1 md:grid-cols-3 gap-14'>
                         <div>
-                            <img src={logo} alt="" className='max-w-xs' />
+                            <img src={logo} alt="" className='max-w-full' />
                             <p className='text-white mt-7 leading-relaxed'>
                                 Front-end developer crafting pixel-perfect and responsiveness. Proficient in HTML, CSS, JavaScript nad Reactjs and so more. to enhance user experiences. Dedicated to delivering visually appealing and seamlessly functional web development.
                             </p>
